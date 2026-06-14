@@ -1,4 +1,4 @@
-mainwindow.xamlとこれ以外は触ってません
+mainwindow.xamlとmainwindow.xaml.cs以外は触ってません
 
 dotnet new wpf -n rakubench
 
