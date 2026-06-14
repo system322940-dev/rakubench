@@ -1,6 +1,6 @@
 mainwindow.xamlとこれ以外は触ってません
 
-"""dotnet new wpf -n rakubench"""
+dotnet new wpf -n rakubench
 
 でプロジェクト作成してmainwindow.xamlとmainwindow.xaml.csをお好きなバージョンのにすれば動きます
 
