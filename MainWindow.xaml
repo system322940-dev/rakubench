@@ -1,0 +1,59 @@
+<Window x:Class="RakuBench.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RakuBench" Height="500" Width="650"
+        WindowStartupLocation="CenterScreen" Background="#1E1E1E">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="RakuBench" 
+                   Foreground="#00FFCC" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <Border Grid.Row="1" Background="#2D2D30" CornerRadius="10" Padding="20" Margin="0,0,0,20">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="BENCHMARK RESULT" Foreground="Gray" FontSize="16" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="ScoreText" Text="---" Foreground="White" FontSize="50" FontWeight="Black" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+            <Button x:Name="CpuStartButton" Content="CPU" 
+                    Width="70" Height="40" FontSize="11" FontWeight="Bold" 
+                    Background="#007ACC" Foreground="White" BorderThickness="0" Margin="0,0,6,0"
+                    Click="CpuStartButton_Click"/>
+            
+            <Button x:Name="DramStartButton" Content="DRAM"
+                    Width="70" Height="40" FontSize="11" FontWeight="Bold"
+                    Background="#D67A00" Foreground="White" BorderThickness="0" Margin="0,0,6,0"
+                    Click="DramStartButton_Click"/>
+
+            <Button x:Name="RomStartButton" Content="ROM"
+                    Width="70" Height="40" FontSize="11" FontWeight="Bold"
+                    Background="#A300D6" Foreground="White" BorderThickness="0" Margin="0,0,6,0"
+                    Click="RomStartButton_Click"/>
+
+            <Button x:Name="GpuStartButton" Content="GPU"
+                    Width="70" Height="40" FontSize="11" FontWeight="Bold"
+                    Background="#107C41" Foreground="White" BorderThickness="0" Margin="0,0,6,0"
+                    Click="GpuStartButton_Click"/>
+
+            <Button x:Name="NetStartButton" Content="ネット"
+                    Width="70" Height="40" FontSize="11" FontWeight="Bold"
+                    Background="#E81123" Foreground="White" BorderThickness="0" Margin="0,0,6,0"
+                    Click="NetStartButton_Click"/>
+            
+            <ProgressBar x:Name="ProgressIndicator" Width="80" Height="10" VerticalAlignment="Center" IsIndeterminate="False" Foreground="#00FFCC" Background="#333333" BorderThickness="0"/>
+        </StackPanel>
+
+        <TextBox x:Name="ResultTextBox" Grid.Row="3" 
+                 TextWrapping="Wrap" AcceptsReturn="True" 
+                 VerticalScrollBarVisibility="Auto" 
+                 IsReadOnly="True" FontFamily="Consolas" FontSize="14"
+                 Background="#2D2D30" Foreground="#D4D4D4" BorderThickness="0" Padding="10"/>
+    </Grid>
+</Window>
